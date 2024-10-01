@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-01T18:50:46.999061" rpa="false" schemaversion="5">
+<suite id="s1" name="productsTC" source="C:\Users\MSI USER\PycharmProjects\SauceDemo\tests\testcases\productsTC.robot">
+<test id="s1-t1" name="All product should be displayed" line="7">
+<kw name="Open Browser To Login Page" owner="memberLoginKW">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:47.402353" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${MAIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-01T18:50:47.402353" elapsed="2.888627"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.291872" elapsed="0.138088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginTitleText}</arg>
+<arg>timeout=2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.429960" elapsed="0.086440"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:50.517164" level="INFO">Verifying element '//div[@class="login_logo"]' contains exact text 'Swag Labs'.</msg>
+<arg>${loginTitleText}</arg>
+<arg>Swag Labs</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.516400" elapsed="0.027135"/>
+</kw>
+<status status="PASS" start="2024-10-01T18:50:47.402353" elapsed="3.142190"/>
+</kw>
+<kw name="Member Input Username" owner="memberLoginKW">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userNameTextField}</arg>
+<arg>timeout=2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.544543" elapsed="0.022591"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:50.567134" level="INFO">Typing text 'standard_user' into text field '//input[@id="user-name"]'.</msg>
+<arg>${userNameTextField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.567134" elapsed="0.130251"/>
+</kw>
+<arg>${standardUser}</arg>
+<status status="PASS" start="2024-10-01T18:50:50.544543" elapsed="0.152842"/>
+</kw>
+<kw name="Member Input Password" owner="memberLoginKW">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>timeout=2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.697385" elapsed="0.020121"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:50.717506" level="INFO">Typing text 'secret_sauce' into text field '//input[@id="password"]'.</msg>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.717506" elapsed="0.096876"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-01T18:50:50.697385" elapsed="0.116997"/>
+</kw>
+<kw name="Member Clicks Login" owner="memberLoginKW">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>timeout=2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.815320" elapsed="0.019153"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:50.834473" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.834473" elapsed="0.131343"/>
+</kw>
+<status status="PASS" start="2024-10-01T18:50:50.814382" elapsed="0.151434"/>
+</kw>
+<kw name="Member Success Login" owner="memberLoginKW">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dashboardTitleText}</arg>
+<arg>timeout=2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.965816" elapsed="0.016148"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:50.987972" level="INFO">Verifying element '//div[@class="app_logo"]' contains exact text 'Swag Labs'.</msg>
+<arg>${dashboardTitleText}</arg>
+<arg>Swag Labs</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-01T18:50:50.987972" elapsed="0.016584"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-01T18:50:53.005418" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-01T18:50:51.005101" elapsed="2.000946"/>
+</kw>
+<status status="PASS" start="2024-10-01T18:50:50.965816" elapsed="2.040683"/>
+</kw>
+<kw name="Products Card is Displayed" owner="productsKW">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-10-01T18:50:53.018884" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${productCard}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-10-01T18:50:53.007624" elapsed="0.012866"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<arg>Not all inventory items displayed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-10-01T18:50:53.020490" elapsed="0.000871"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-01T18:50:53.022487" level="INFO">6 product is Displayed</msg>
+<arg>${count} product is Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-01T18:50:53.021361" elapsed="0.001126"/>
+</kw>
+<status status="PASS" start="2024-10-01T18:50:53.006915" elapsed="0.015572"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-01T18:50:53.023578" elapsed="3.235892"/>
+</kw>
+<doc>- Check All Product should be displayed
+- Count the number of products that appear</doc>
+<status status="PASS" start="2024-10-01T18:50:47.402353" elapsed="8.857117"/>
+</test>
+<status status="PASS" start="2024-10-01T18:50:47.031589" elapsed="9.227881"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="productsTC">productsTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
